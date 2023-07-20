@@ -1,8 +1,14 @@
 name: Build Go-Proxy-BingAI
-on:
+on: 
+  release:
+    types: [published]
   push:
     tags:
-      - v*
+    - 'v*'
+  #  branches: 
+  #    - master
+#  schedule:
+#    - cron: 0 8 * * 5
   watch:
     types: [started]
 jobs:
